@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 3</title>
+</head>
+<body style="padding: 20px;">
+    <form name="super" id="superSend" action="" onsubmit="return false;">
+            
+        <p>Compra <input style="margin-left:30px;" type="text" id="compra"/></p>
+        <p>Precio <input style="margin-left:40px;" type="number" id="precio"/></p>
+        <p>Cantidad <input style="margin-left:23px;" type="number" id="cantidad"/></p>
+        <p>Presupuesto <select id="presupuesto"> 
+            <option value="50" selected>50</option>
+            <option value="100" >100</option>
+            <option value="250" >250</option>
+            <option value="500" >500</option></select>
+        </p>
+        <br>
+        <input type="submit" value="Agregar a la lista" onclick="addRow();return false;"/>
+        <input type="submit" value="Balance" onclick="Balance();return false;"/>
+        </form>
+        
+        <table border='1' id="table">
+            <thead id="initial">
+                <tr>
+                    <th>Compra</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <thead id="next"></thead>
+        </table>
+        
+        <p>Total:<p id="totalText"> </p></p> 
+        <p>Diferencia:<p id="diferenciaText"> </p></p> 
+    <script src="script.js"></script>
+    
+</body>
+</html>
